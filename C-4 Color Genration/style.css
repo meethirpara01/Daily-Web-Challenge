@@ -1,0 +1,140 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+}
+html .container, body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 2em;
+  align-items: center;
+  gap: 1em;
+  background-color: black;
+  border-radius: 1em;
+}
+html .container .btn, body .container .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+html .container .btn .Genrate, body .container .btn .Genrate {
+  padding: 0.5em 1em;
+  font-size: 1.4em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+html .container .btn .Genrate:hover, body .container .btn .Genrate:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #111;
+  color: #fff;
+}
+html .container .GColor, body .container .GColor {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  justify-content: space-around;
+  padding: 2em;
+  background-color: #fff;
+  border-radius: 1em;
+  gap: 2em;
+}
+html .container .GColor .color, body .container .GColor .color {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border-radius: 1em;
+}
+html .container .GColor .color .HEXCOLOR, body .container .GColor .color .HEXCOLOR {
+  font-size: 1.2em;
+}
+html .container .GColor .color .Copy, body .container .GColor .color .Copy {
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+}
+html .container .GColor .color .Copy:hover, body .container .GColor .color .Copy:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+}
+html .container .GColor .color .message, body .container .GColor .color .message {
+  font-size: 1.1em;
+}
+html .container .GColor .color .delete, body .container .GColor .color .delete {
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+}
+html .container .GColor .color .delete:hover, body .container .GColor .color .delete:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+}
+html .container .GColor .color, body .container .GColor .color {
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+html .container .GColor .fade-out, body .container .GColor .fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.3s ease;
+}
+html .container .history .history, body .container .history .history {
+  padding: 0.5em 1em;
+  font-size: 1.3em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+html .container .history .history:hover, body .container .history .history:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #111;
+  color: #fff;
+}
+
+@media (min-width: 1080px) {
+  html, body {
+    padding: 1.5em;
+  }
+  html .container, body .container {
+    padding: 1.5em 4em;
+  }
+  html .container .GColor .color, body .container .GColor .color {
+    width: 25%;
+    height: 30%;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,194 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body 
+{
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+
+
+    .container
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 1.5em 2em;
+        // justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background-color: black;
+        border-radius: 1em;
+
+        .btn
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+
+            .Genrate
+            {
+                padding: 0.5em 1em;
+                font-size: 1.4em;
+                border: 1px solid black;
+                border-radius: 0.5em;
+            }
+
+            .Genrate:hover
+            {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #111;
+                color: #fff;
+            }
+        }
+
+        .GColor
+        {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: scroll;
+            justify-content: space-around;
+            padding: 2em;
+            background-color: #fff;
+            border-radius: 1em;
+            gap: 2em;
+
+            .color
+            {
+                width: 100%;
+                height: fit-content;
+                padding: 2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0.5em;
+                border-radius: 1em;
+
+                .HEXCOLOR
+                {
+                    font-size: 1.2em;
+                }
+
+                .Copy
+                {
+                    padding: 0.5em 1em;
+                    font-size: 1.1em;
+                    border: 1px solid #fff;
+                    border-radius: 0.5em;
+                }
+
+                .Copy:hover
+                {
+                    cursor: pointer;
+                    scale: 1.1;
+                    background-color: #111;
+                    border: 1px solid #111;
+                    color: #fff;
+                }
+
+                .message
+                {
+                    // color: red;
+                    font-size: 1.1em;
+                }
+
+                .delete
+                {
+                    padding: 0.5em 1em;
+                    font-size: 1.1em;
+                    border: 1px solid #fff;
+                    border-radius: 0.5em;
+                }
+
+                .delete:hover
+                {
+                    cursor: pointer;
+                    scale: 1.1;
+                    background-color: #111;
+                    border: 1px solid #111;
+                    color: #fff;
+                }
+
+                
+            }
+
+            .color
+            {
+                animation: fadeIn 0.3s ease;
+            }
+
+            @keyframes fadeIn 
+            {
+                from { opacity: 0; transform: scale(0.95); }
+                to { opacity: 1; transform: scale(1); }
+            }
+
+            .fade-out 
+            {
+                opacity: 0;
+                transform: scale(0.95);
+                transition: all 0.3s ease;
+            }
+
+        }
+
+        .history
+        {
+            .history
+            {
+                padding: 0.5em 1em;
+                font-size: 1.3em;
+                border: 1px solid black;
+                border-radius: 0.5em;
+
+            }
+            .history:hover
+            {
+                cursor: pointer;
+                scale: 1.1;
+                background-color: #111;
+                color: #fff;
+            }
+        }
+    }
+
+    
+}
+
+
+
+@media(min-width: 1080px) 
+{
+
+html, body 
+{
+    padding: 1.5em;
+
+    .container
+    {
+        padding: 1.5em 4em;
+
+        .GColor
+        {
+
+            .color
+            {
+                width: 25%;
+                height: 30%;
+            }
+        }
+    }
+  
+}
+}
