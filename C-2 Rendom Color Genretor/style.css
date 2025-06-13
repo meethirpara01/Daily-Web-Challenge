@@ -1,0 +1,55 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+}
+html .Container, body .Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  background-color: black;
+  border-radius: 0.8em;
+}
+html .Container .Color, body .Container .Color {
+  width: 28%;
+  aspect-ratio: 1/1;
+  border: 0.7em solid #fff;
+  border-radius: 50%;
+}
+html .Container .btn, body .Container .btn {
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  border: 0.1em solid black;
+}
+html .Container .btn:hover, body .Container .btn:hover {
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  scale: 1.1;
+}
+html .Container .copy, body .Container .copy {
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border-radius: 0.5em;
+  border: 0.1em solid black;
+}
+html .Container .copy:hover, body .Container .copy:hover {
+  background-color: #111;
+  color: #fff;
+  cursor: pointer;
+  scale: 1.1;
+}
+html .Container .message, body .Container .message {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

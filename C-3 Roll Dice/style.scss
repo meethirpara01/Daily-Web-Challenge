@@ -1,0 +1,55 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+
+
+    .container
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        background-color: black;
+        border-radius: 0.5em;
+
+
+        .Roll-Dice
+        {
+            padding: 0.5em 1em;
+            font-size: 1.5em;
+            border: 1px solid black;
+            border-radius: 0.5em;
+        }
+        .Roll-Dice:hover
+        {
+            scale: 1.1;
+            background-color: #111;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+        .Emoji
+        {
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .value
+        {
+            font-size: 1.5em;
+            color: white;
+        }
+    }
+}

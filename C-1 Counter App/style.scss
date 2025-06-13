@@ -1,0 +1,141 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.light-theme
+{
+    background-color: #fff;
+}
+.dark-theme
+{
+    // background-color: rgb(3, 22, 44);
+    background-color: rgb(3, 22, 57);
+}
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .head
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-self: center;
+        gap: 5em;
+
+        h1 
+        {
+            padding: 1em;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            opacity: 0.6;
+            font-weight: 400;
+        }
+        .themeToggle
+        {
+            align-self: center;
+            padding: 1em;
+            font-size: 2.5em;
+            cursor: pointer;
+        }
+    }
+
+
+    main 
+    {
+        width: 100%;
+        // aspect-ratio: 1 / 1;
+        height: 100%;
+
+        .Containte 
+        {
+            width: 100%;
+            // aspect-ratio: 1 / 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2em;
+
+            h2 
+            {
+                font-size: 2em;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            .count
+            {
+                padding: 0.5em 1em;
+                border: 1px solid black;
+                border-radius: 0.4em;
+            }
+
+            .idbutton
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1em;
+
+                .inc
+                {
+                    padding: 0.2em 1em; 
+                    font-size: 2em;
+                    border-radius: 0.2em;
+                    cursor: pointer;
+                    background-color: #fff;
+                }
+                .inc:hover
+                {
+                    scale: 1.1;
+                    background-color: #111;
+                    color: #fff;
+                }
+
+                .dec
+                {
+                    padding: 0.2em 1em; 
+                    font-size: 2em;
+                    border-radius: 0.2em;
+                    cursor: pointer;
+                    background-color: #fff;
+                }
+
+                .dec:hover
+                {
+                    scale: 1.1;
+                    background-color: #111;
+                    color: #fff;
+                }
+
+
+            }
+
+            .reset
+            {
+                padding: 0.2em 1em; 
+                font-size: 2em;
+                border-radius: 0.2em;
+                cursor: pointer;
+                background-color: #fff;
+
+            }
+
+            .reset:hover
+            {
+                scale: 1.1;
+                background-color: #111;
+                color: #fff;
+            }
+
+        }
+        
+    }
+
+}
+

@@ -1,0 +1,103 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.light-theme {
+  background-color: #fff;
+}
+
+.dark-theme {
+  background-color: rgb(3, 22, 57);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html .head, body .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 5em;
+}
+html .head h1, body .head h1 {
+  padding: 1em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  opacity: 0.6;
+  font-weight: 400;
+}
+html .head .themeToggle, body .head .themeToggle {
+  align-self: center;
+  padding: 1em;
+  font-size: 2.5em;
+  cursor: pointer;
+}
+html main, body main {
+  width: 100%;
+  height: 100%;
+}
+html main .Containte, body main .Containte {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+html main .Containte h2, body main .Containte h2 {
+  font-size: 2em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+html main .Containte .count, body main .Containte .count {
+  padding: 0.5em 1em;
+  border: 1px solid black;
+  border-radius: 0.4em;
+}
+html main .Containte .idbutton, body main .Containte .idbutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+html main .Containte .idbutton .inc, body main .Containte .idbutton .inc {
+  padding: 0.2em 1em;
+  font-size: 2em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  background-color: #fff;
+}
+html main .Containte .idbutton .inc:hover, body main .Containte .idbutton .inc:hover {
+  scale: 1.1;
+  background-color: #111;
+  color: #fff;
+}
+html main .Containte .idbutton .dec, body main .Containte .idbutton .dec {
+  padding: 0.2em 1em;
+  font-size: 2em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  background-color: #fff;
+}
+html main .Containte .idbutton .dec:hover, body main .Containte .idbutton .dec:hover {
+  scale: 1.1;
+  background-color: #111;
+  color: #fff;
+}
+html main .Containte .reset, body main .Containte .reset {
+  padding: 0.2em 1em;
+  font-size: 2em;
+  border-radius: 0.2em;
+  cursor: pointer;
+  background-color: #fff;
+}
+html main .Containte .reset:hover, body main .Containte .reset:hover {
+  scale: 1.1;
+  background-color: #111;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

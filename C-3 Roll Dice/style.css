@@ -1,0 +1,42 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 1.5em;
+}
+html .container, body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: black;
+  border-radius: 0.5em;
+}
+html .container .Roll-Dice, body .container .Roll-Dice {
+  padding: 0.5em 1em;
+  font-size: 1.5em;
+  border: 1px solid black;
+  border-radius: 0.5em;
+}
+html .container .Roll-Dice:hover, body .container .Roll-Dice:hover {
+  scale: 1.1;
+  background-color: #111;
+  color: aliceblue;
+  cursor: pointer;
+}
+html .container .Emoji, body .container .Emoji {
+  font-size: 1.5em;
+  color: white;
+}
+html .container .value, body .container .value {
+  font-size: 1.5em;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
