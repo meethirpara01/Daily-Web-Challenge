@@ -1,0 +1,133 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+}
+html .container, body .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  background-color: black;
+  color: white;
+  border-radius: 1.2em;
+  padding: 1em;
+}
+html .container .Day, body .container .Day {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 0.5em;
+}
+html .container .Day .DayDate, body .container .Day .DayDate {
+  color: #111;
+  font-size: 1.5em;
+}
+html .container .clock, body .container .clock {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+  gap: 0.5em;
+}
+html .container .clock .hours, body .container .clock .hours {
+  display: flex;
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+html .container .clock .hours .clockHours, body .container .clock .hours .clockHours {
+  color: #111;
+  font-size: 4em;
+}
+html .container .clock .Dot, body .container .clock .Dot {
+  font-size: 4em;
+}
+html .container .clock .minute, body .container .clock .minute {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+html .container .clock .minute .clockMinute, body .container .clock .minute .clockMinute {
+  color: #111;
+  font-size: 4em;
+}
+html .container .clock .secoend, body .container .clock .secoend {
+  background-color: #fff;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+html .container .clock .secoend .clockSecoend, body .container .clock .secoend .clockSecoend {
+  color: #111;
+  font-size: 4em;
+}
+html .container .clock .PmOrAm, body .container .clock .PmOrAm {
+  background-color: #fff;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html .container .clock .PmOrAm .PmAm, body .container .clock .PmOrAm .PmAm {
+  color: #111;
+  font-size: 1em;
+}
+html .container .Switch, body .container .Switch {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5em 1em;
+  font-size: 1.4em;
+  border: 1px solid #fff;
+  border-radius: 0.5em;
+}
+html .container .Switch:hover, body .container .Switch:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+}
+
+@media (min-width: 780px) {
+  html, body {
+    padding: 2em;
+  }
+  html .container, body .container {
+    padding: 2em;
+  }
+  html .container .Day .DayDate, body .container .Day .DayDate {
+    font-size: 1.8em;
+  }
+  html .container .clock, body .container .clock {
+    gap: 2em;
+  }
+  html .container .clock .hours .clockHours, body .container .clock .hours .clockHours {
+    font-size: 20em;
+  }
+  html .container .clock .Dot, body .container .clock .Dot {
+    font-size: 8em;
+  }
+  html .container .clock .minute .clockMinute, body .container .clock .minute .clockMinute {
+    font-size: 20em;
+  }
+  html .container .clock .secoend .clockSecoend, body .container .clock .secoend .clockSecoend {
+    font-size: 20em;
+  }
+  html .container .clock .PmOrAm .PmAm, body .container .clock .PmOrAm .PmAm {
+    font-size: 4em;
+  }
+}/*# sourceMappingURL=style.css.map */
