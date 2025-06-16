@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Typeing Speed</title>
+</head>
+
+<body>
+    <div class="game-container">
+        <h2>Typing Speed Game</h2>
+
+        <div class="quote" id="quoteDisplay">
+            <div class="quote-box">
+                <div class="quote">
+                    <p class="quote-text">Loading...</p>
+                    <p class="quote-author">- Author</p>
+                </div>
+                <dib class="btns">
+                    <button class="new-quote">New Quote</button>
+                    <button class="copy-quote">Copy Quote</button>
+                    <div class="copy-message" style="display: none;">Copied!</div>
+                </dib>
+            </div>
+
+        </div>
+
+        <div class="game">
+            <h2 class="h2">Write the quote written above below here.</h2>
+            <textarea id="quoteInput" placeholder="Start typing here..." rows="12" cols="15"></textarea>
+            <div class="stats">
+                <p>Time: <span id="timer">0</span> s</p>
+                <p>WPM: <span id="wpm">0</span></p>
+                <p>Accuracy: <span id="accuracy">0</span>%</p>
+                <p>Mistakes: <span id="mistakes">0</span></p>
+            </div>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
