@@ -1,5 +1,4 @@
-const quotes = 
-[
+const quotes = [
     { text: "Believe in yourself.", author: "Anonymous" },
     { text: "Stay hungry, stay foolish.", author: "Steve Jobs" },
     { text: "Do something today that your future self will thank you for.", author: "Unknown" },
@@ -11,65 +10,80 @@ const newQuoteBtn = document.querySelector(".new-quote");
 const copyQuoteBtn = document.querySelector(".copy-quote");
 const copyMessage = document.querySelector(".copy-message");
 
-function getRandomQuote() 
-{
+const quoteInput = document.querySelector("#quoteInput");
+const timer = document.querySelector("#timer");
+const restart = document.querySelector("#restart");
+const WPM = document.querySelector("#wpm");
+
+let isStarted = false;
+let Timer = 0;
+let intervalID;
+
+function getRandomQuote() {
     const random = Math.floor(Math.random() * quotes.length);
     const quote = quotes[random];
     quoteText.textContent = `"${quote.text}"`;
     quoteAuthor.textContent = `- ${quote.author}`;
+    quoteInput.disabled = false;
+    quoteInput.value = '';
+    quoteInput.classList.remove('correct', 'incorrect');
+    timer.textContent = '0';
+    Timer = 0;
+    isStarted = false;
 }
 
-// Show random quote on page load
 getRandomQuote();
 
-// New quote on button click
 newQuoteBtn.addEventListener("click", getRandomQuote);
 
-// Clipboard API to copy quote
-copyQuoteBtn.addEventListener("click", () => 
-{
+copyQuoteBtn.addEventListener("click", () => {
     const fullQuote = `${quoteText.textContent} ${quoteAuthor.textContent}`;
-    navigator.clipboard.writeText(fullQuote).then(() => 
-    {
+    navigator.clipboard.writeText(fullQuote).then(() => {
         copyMessage.style.display = "block";
         setTimeout(() => (copyMessage.style.display = "none"), 1500);
     });
 });
 
-
-const quoteInput = document.querySelector("#quoteInput");
-const timer = document.querySelector("#timer");
-let isStarted = false;
-let Timer = 0;
-let intervalID;
-
-let startTime = () =>
-{
-    intervalID = setInterval(() =>
-    {
+function startTime() {
+    intervalID = setInterval(() => {
         Timer++;
         timer.textContent = Timer;
     }, 1000);
 }
-quoteInput.addEventListener('input', () =>
-{
-    if (!isStarted) 
-    {
-        startTime();
-        isStarted = true;
-        
-    }
+
+quoteInput.addEventListener('input', () => {
     const userInput = quoteInput.value.trim();
     const targetQuote = quoteText.textContent.replace(/"/g, '').trim();
 
-    if (userInput === targetQuote) 
-    {
-        clearInterval(intervalID);          // Stop timer
-        alert(`🎉 Well done! You typed it in ${Timer} seconds.`);
-        isStarted = false;                  // Reset for next quote
-        Timer = 0;
-        timer.textContent = '0';
-        quoteInput.value = '';
-        getRandomQuote();                   // Load next quote
+    // Real-time feedback
+    if (targetQuote.startsWith(userInput)) {
+        quoteInput.classList.add('correct');
+        quoteInput.classList.remove('incorrect');
+    } else {
+        quoteInput.classList.add('incorrect');
+        quoteInput.classList.remove('correct');
     }
-})
+
+    // Start timer once
+    if (!isStarted) {
+        startTime();
+        isStarted = true;
+    }
+
+    // If completed
+    if (userInput === targetQuote) {
+        clearInterval(intervalID);
+        let words = targetQuote.split(" ").length;
+        let minutes = Timer / 60;
+        let wpm = Math.round(words / minutes);
+
+        WPM.textContent = wpm;
+        alert(`🎉 Well done! Time: ${Timer}s\nWPM: ${wpm}`);
+        quoteInput.disabled = true;
+    }
+});
+
+restart.addEventListener('click', () => {
+    clearInterval(intervalID);
+    getRandomQuote();
+});

@@ -129,6 +129,12 @@ html .game-container .game #quoteInput:-moz-placeholder-shown, body .game-contai
 html .game-container .game #quoteInput:placeholder-shown, body .game-container .game #quoteInput:placeholder-shown {
   font-size: 1.3em;
 }
+html .game-container .game .correct, body .game-container .game .correct {
+  border: 2px solid green;
+}
+html .game-container .game .incorrect, body .game-container .game .incorrect {
+  border: 2px solid red;
+}
 html .game-container .game .stats, body .game-container .game .stats {
   display: flex;
   flex-direction: column;
@@ -139,4 +145,17 @@ html .game-container .game .stats, body .game-container .game .stats {
 html .game-container .game .stats p, body .game-container .game .stats p {
   color: white;
   font-size: 1.5em;
+}
+html .game-container .game #restart, body .game-container .game #restart {
+  padding: 0.5em 1.5em;
+  font-size: 1.2em;
+  border-radius: 0.5em;
+  border: 1px solid rgb(33, 31, 71);
+}
+html .game-container .game #restart:hover, body .game-container .game #restart:hover {
+  cursor: pointer;
+  background-color: rgb(73, 71, 104);
+  color: white;
+  border: 1px solid white;
+  scale: 1.1;
 }/*# sourceMappingURL=style.css.map */
