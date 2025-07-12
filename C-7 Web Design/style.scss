@@ -1,0 +1,1037 @@
+@font-face 
+{
+    font-family: gilroylight;
+    src: url(./Gilroy-Light.otf);
+}
+
+@font-face 
+{
+    font-family: gilroybold;
+    src: url(./Gilroy-ExtraBold.otf);
+}
+
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html, body
+{
+    width: 100%;
+    height: 100%;
+    font-family: gilroylight;
+
+    main
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        // padding: 0.5rem 1rem;
+        padding-top: 0.5rem;
+
+        .navbar
+        {
+            width: 100%;
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            // padding: 0px 1rem;
+            // background-color: lightgoldenrodyellow;
+
+            .logo
+            {
+                display: flex;
+                align-items: center;
+
+                .logoimage
+                {
+                    width: 2.5rem;
+                    aspect-ratio: 1 / 1;
+
+                    img
+                    {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                h2
+                {
+                    font-size: 1.4em;
+                }
+
+            }
+
+            .menu
+            {
+                display: none;
+                gap: 1.2rem;
+                a 
+                {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.4em;
+                    position: relative;
+                }
+                a::after 
+                {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 2px;
+                    background-color: black;
+                    transition: width 0.3s ease;
+                }
+
+                a:hover::after 
+                {
+                    width: 100%;
+                }
+            }
+
+            .login
+            {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                position: relative;
+
+                .menuMobile
+                {
+                    position: absolute;
+                    top: 150%;
+                    left: 0%;
+                    display: none;
+                    flex-direction: column;
+                    transition: all 0.3s ease;
+                    background-color: white;
+                    border: 1px solid gray;
+                    border-radius: 0.5rem;
+                    padding: 0.5rem;
+
+                    a
+                    {
+                        width: 100%;
+                        height: 100%;
+                        text-decoration: none;
+                        color: black;
+                        padding: 1rem 0rem; 
+                        padding-right: 2.7rem;
+                        // background-color: lightgoldenrodyellow;
+                    }
+                    a:hover
+                    {
+                        padding: 1rem 0.2rem; 
+                        padding-right: 3rem;
+                        background: linear-gradient(to right, rgb(39, 130, 204, 0.5), rgb(18, 17, 17, 0.5),  rgb(204, 39, 39, 0.5));
+                        border-radius: 0.5rem;
+                        color: black;
+                    }
+                }
+
+                .line
+                {
+                    cursor: pointer;
+                }
+
+                .loginbtn
+                {
+                    font-size: 1.1em;
+                    font-family: gilroylight;
+                    padding: 0.5rem 1.3em;
+                    background-color: black;
+                    color: white;
+                    border: 1px solid black;
+                }
+
+                .loginbtn:hover
+                {
+                    cursor: pointer;
+                    scale: 0.95;
+                }
+                
+            }
+
+        }
+
+        .view
+        {
+            width: 100%;
+            padding: 0.5rem 1.5rem;
+            padding-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            // gap: 0.5em;
+
+            .word
+            {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                div 
+                {
+                    
+                    h1
+                    {
+                        font-size: clamp(3rem, 12vw, 15rem);
+                        // font-size: 3em;
+                        font-family: gilroybold;
+                    }
+                }
+
+                .img-letter
+                {
+                    img
+                    {
+                        width: clamp(2.8rem, 10vw, 12rem);
+                        aspect-ratio: 1/1;
+                        object-fit: cover;
+                        object-position: top;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+
+            .text
+            {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: clamp(0rem, 5vw, 5rem);
+                padding-right: 1.5rem;
+                
+                p 
+                {
+                    font-size: clamp(1.7em, 7vw, 5rem);
+                    font-family: gilroybold;
+
+                }
+
+                .startbtn
+                {
+                    background-color: black;
+                    color: white;
+                    border-radius: 5rem;
+                    border: 1px solid white;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    padding-right: 0.5rem;
+                    
+                    img
+                    {
+                        width: 2.5rem;
+                        // padding-right: 6rem;
+                    }
+                }
+
+                .startbtn::after
+                {
+                    content: "Start Animating";
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
+                    color: black;
+                    padding: 0rem 0.4rem;
+                    font-size: 1.1em;
+                    top: 0%;
+                    left: 29%;
+                    width: 0%;
+                    text-align: center;
+                    height: 100%;
+                    background-color: yellow;
+                    border-radius: 5rem;
+                    border: 1px solid yellow;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+
+                .startbtn:hover::after 
+                {
+                    cursor: pointer;
+                    width: 75%;
+                    opacity: 1;
+                    visibility: visible;
+                    transition: width 0.1s ease, opacity 0.5s ease;
+                }
+            }
+        }
+
+
+        .hero
+        {
+            width: 100%;
+            padding-top: 12rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+            .marquee-background
+            {
+                width: 100%;
+                position: relative;
+                overflow: hidden;
+                background-color: black;
+
+                .marquee-track1
+                {
+                    width: 100%;
+                    // background-color: black;
+                    display: flex;
+                    // overflow: hidden;
+                    position: relative;
+                    padding: 2rem 0rem;
+                    padding-top: 4rem;
+                    gap: 0;
+                    transform: rotate(-8deg);
+                    transform-origin: center; 
+
+                    .textm
+                    {
+                        display: flex;
+                        gap: 0rem;
+                        animation: marquee 8s linear infinite both;
+
+                        .p2-1
+                        {
+                            width: 18rem;
+                            height: fit-content;
+                            text-align: center;
+                            background-color: rgb(0, 115, 255);
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-2
+                        {
+                            height: fit-content;
+                            background-color: yellow;
+                            color: black;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-3
+                        {
+                            background-color: rgb(255, 49, 83);
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-4
+                        {
+                            background-color: rgb(120, 209, 239);
+                            color: black;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                    }
+
+                }
+
+
+                .marquee-track2
+                {
+                    width: 100%;
+                    // background-color: black;
+                    display: flex;
+                    // overflow: hidden;
+                    position: relative;
+                    padding: 2rem 0rem;
+                    padding-top: 4rem;
+                    gap: 0;
+                    transform: rotate(-8deg);
+                    transform-origin: center; 
+
+                    .textm
+                    {
+                        display: flex;
+                        gap: 0rem;
+                        animation: marquee 8s linear infinite both;
+
+                        .p2-1
+                        {
+                            width: 18rem;
+                            height: fit-content;
+                            text-align: center;
+                            background-color: rgb(0, 115, 255);
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-2
+                        {
+                            height: fit-content;
+                            background-color: yellow;
+                            color: black;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-3
+                        {
+                            background-color: rgb(255, 49, 83);
+                            color: white;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                        .p2-4
+                        {
+                            background-color: rgb(120, 209, 239);
+                            color: black;
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            padding: 0.5rem 2rem;
+                        }
+                    }
+                }
+            }
+
+            .ai-image-wrapper
+            {
+                position: relative;
+
+                img 
+                {
+                    position: absolute;
+                    width: 20rem;
+                    left: 50%;
+                    bottom: 0;
+                    opacity: 0;
+                    transform: translate(-50%, 100%);
+                    animation: slideUp 1s ease-out 0.1s forwards;
+                }
+            }
+        } 
+
+        .view-2
+        {
+            width: 100%;
+            padding: 0.5rem 1.5rem;
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+
+            .rich
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .Supported
+                {
+                    width: 100%;
+                    h2 
+                    {
+                        font-size: clamp(2rem, 3vw, 5rem);
+
+
+                    }
+                }
+
+                .SCompany
+                {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+
+                    .imgwithtext1
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        img 
+                        {
+                            width: 3rem;
+                            border-radius: 10%;
+                        }
+                    }
+                    .imgwithtext2
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.5rem;
+                        img 
+                        {
+                            width: 3.5rem;
+                            border-radius: 10%;
+                        }
+                    }
+                    .imgwithtext3
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0.8rem;
+                        img 
+                        {
+                            width: 3rem;
+                            border-radius: 10%;
+                        }
+                    }
+                    .imgwithtext4
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        // gap: 0.5rem;
+                        img 
+                        {
+                            width: 3.8rem;
+                            border-radius: 10%;
+                        }
+                    }
+                }
+
+            }
+
+            .USER
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                .UIH
+                {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+
+                    .Users
+                    {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        h1 
+                        {
+                            font-family: gilroybold;
+                            font-size: clamp(2rem, 3vw, 2rem);
+
+
+                        }
+
+                        h3 
+                        {
+                            font-family: gilroybold;
+                            font-weight: 400;
+                            letter-spacing: 1.5px;
+
+                        }
+
+                    }
+
+                }
+
+                .UPIC
+                {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+
+                    .pic
+                    {
+                        width: 50%;
+                        display: flex;
+                        position: relative;
+
+                        .Propic1
+                        {
+                            width: 4rem;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                            border-radius: 50%;
+                        }
+                        .Propic2
+                        {
+                            width: 4rem;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 26%;
+                        }
+                        .Propic3
+                        {
+                            width: 4rem;
+                            aspect-ratio: 1 / 1;
+                            object-fit: cover;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 56%;
+                        }
+
+                    }
+
+                    .textwithpic
+                    {
+                        width: 50%;
+
+                        h2 
+                        {
+                            font-family: gilroybold;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+@media (min-width: 780px)
+{
+    html, body
+    {
+        main
+        {
+            // padding: 3rem 3rem;
+
+            .navbar
+            {
+                padding: 3rem 5rem;
+            
+                .logo
+                {
+                    gap: 0.3rem;
+                
+                    .logoimage
+                    {
+                        img
+                        {
+                            width: 3rem;
+                        }
+                    }
+
+                    h2
+                    {
+                        font-size: 1.5em;
+                    }
+
+                }
+
+                .menu
+                {
+                    display: flex;
+                }
+
+                .login
+                {
+                    .menuMobile
+                    {
+                        display: none;
+                    }
+                    .line
+                    {
+                        display: none;
+                    }
+                    .loginbtn
+                    {
+                        font-size: 1.4em;
+                        padding: 0.5rem 1.4em;
+                    }
+                }
+            }
+            .hero
+            {
+                .ai-image-wrapper
+                {
+                    img 
+                    {
+                        width: 20rem;
+                    }
+                }
+            }
+
+            .view-2
+            {
+                padding: 3rem 5rem;
+
+                .rich
+                {
+                    
+                }
+
+                .USER
+                {
+                
+
+                    .UIH
+                    {
+
+                        .Users
+                        {
+                        
+
+                            h1 
+                            {
+                                font-family: gilroybold;
+                                font-size: clamp(2rem, 3vw, 2rem);
+                            }
+                        }
+                    }
+
+                    .UPIC
+                    {
+                        .pic
+                        {
+                            width: 40%;
+                            display: flex;
+                            // justify-content: center;
+                            padding-left: 4rem;
+                            align-items: center;
+                            position: relative;
+
+                            .Propic1
+                            {
+                                border-radius: 50%;
+                            }
+                            .Propic2
+                            {
+                                position: absolute;
+                                left: 46%;
+                            }
+                            .Propic3
+                            {
+                                left: 68%;
+                            }
+
+                        }
+
+                        .textwithpic
+                        {
+                            width: 60%;
+                            align-items: center;
+                            justify-content: center;
+
+                            h2 
+                            {
+                                font-family: gilroybold;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+
+
+
+@media (min-width: 1080px)
+{
+    html, body
+    {
+        main
+        {
+            // padding: 3rem 3.5rem;
+
+            .navbar
+            {
+                padding: 3rem 5rem;
+
+                .menu
+                {
+                    display: flex;
+                    gap: 4rem;
+                }
+
+                .login
+                {
+                    .menuMobile
+                    {
+                        display: none;
+                    }
+                    .line
+                    {
+                        display: none;
+                    }
+                    .loginbtn
+                    {
+                        font-size: 1.3em;
+                        padding: 0.5rem 1.4em;
+                    }
+                }
+            }  
+            
+            .view
+            {
+                padding: 3rem 3.5rem;
+
+                width: 100%;
+                padding: 0rem 0.5rem;
+                padding-top: 1rem;
+                display: flex;
+                flex-direction: column;
+                // gap: 0.5em;
+
+                .word
+                {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    div 
+                    {
+                    
+                        h1
+                        {
+                            font-size: clamp(3rem, 12vw, 15rem);
+                            // font-size: 3em;
+                            font-family: gilroybold;
+                        }
+                    }
+
+                    .img-letter
+                    {
+                        img
+                        {
+                            width: clamp(2.8rem, 10vw, 12rem);
+                            aspect-ratio: 1/1;
+                            object-fit: cover;
+                            object-position: top;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+
+                .text
+                {
+                    padding-left: clamp(0rem, 5vw, 20rem);
+                    padding-right: 15rem;
+                
+                    p 
+                    {
+                        padding-left: 6rem;
+                    }
+
+                    .startbtn
+                    {
+                        font-size: 1rem;
+                    }
+
+                    .startbtn::after
+                    {
+                        left: 25%;
+                    }
+
+                    .startbtn:hover::after 
+                    {
+                        width: 82%;
+                    }
+                }
+            }
+
+            .hero
+            {
+                .ai-image-wrapper
+                {
+                    img 
+                    {
+                        width: 25rem;
+                    }
+                }
+            }
+
+            .view-2
+            {
+            
+                flex-direction: row;
+                padding: 4rem 9.5rem;
+                gap: 0rem;
+
+                .rich
+                {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5rem;
+
+                    .Supported
+                    {
+                        width: 100%;
+                        h2 
+                        {
+                            font-size: clamp(2rem, 3vw, 3rem);
+                            font-family: gilroybold;
+                        }
+                    }
+
+                    .SCompany
+                    {
+                        width: 80%;
+
+                        .imgwithtext1
+                        {
+                            img 
+                            {
+                                width: 4rem;
+                            }
+                        }
+                        .imgwithtext2
+                        {
+                            img 
+                            {
+                                width: 4.5rem;
+                                border-radius: 10%;
+                            }
+                        }
+                        .imgwithtext3
+                        {
+                            img 
+                            {
+                                width: 4rem;
+                            }
+                        }
+                        .imgwithtext4
+                        {
+                            img 
+                            {
+                                width: 4.8rem;
+                            }
+                        }
+                    }
+                }
+
+                .USER
+                {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+
+                    .UIH
+                    {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-start;
+                        gap: 5rem;
+
+                        .Users
+                        {
+                            gap: 1rem;
+
+                            h1 
+                            {
+                                font-family: gilroybold;
+                                font-size: clamp(2rem, 3vw, 3rem);
+                            }
+
+                            h3 
+                            {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .UPIC
+                    {
+                        justify-content: flex-start;
+                    
+                        .pic
+                        {
+                            width: 40%;
+                            display: flex;
+                            justify-content: flex-start;
+                            position: relative;
+                            padding: 0rem;
+
+                            .Propic1
+                            {
+                                width: 4.5rem;
+                            }
+                            .Propic2
+                            {
+                                width: 4.5rem;
+                                position: absolute;
+                                left: 20%;
+                            }
+                            .Propic3
+                            {
+                                width: 4.5rem;
+                                position: absolute;
+                                left: 40%;
+                            }
+                        }
+
+                        .textwithpic
+                        {
+                            width: 60%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+                            align-items: flex-start;
+                            justify-content: flex-start;
+
+                            h2 
+                            {
+                                font-family: gilroybold;
+                                font-weight: 400;
+                                font-size: 2rem;
+                            }
+
+                            p
+                            {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }   
+        }
+    }
+}

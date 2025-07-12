@@ -1,0 +1,701 @@
+@font-face {
+  font-family: gilroylight;
+  src: url(./Gilroy-Light.otf);
+}
+@font-face {
+  font-family: gilroybold;
+  src: url(./Gilroy-ExtraBold.otf);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: gilroylight;
+}
+html main, body main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.5rem;
+}
+html main .navbar, body main .navbar {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+html main .navbar .logo, body main .navbar .logo {
+  display: flex;
+  align-items: center;
+}
+html main .navbar .logo .logoimage, body main .navbar .logo .logoimage {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+}
+html main .navbar .logo .logoimage img, body main .navbar .logo .logoimage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+html main .navbar .logo h2, body main .navbar .logo h2 {
+  font-size: 1.4em;
+}
+html main .navbar .menu, body main .navbar .menu {
+  display: none;
+  gap: 1.2rem;
+}
+html main .navbar .menu a, body main .navbar .menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4em;
+  position: relative;
+}
+html main .navbar .menu a::after, body main .navbar .menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+html main .navbar .menu a:hover::after, body main .navbar .menu a:hover::after {
+  width: 100%;
+}
+html main .navbar .login, body main .navbar .login {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  position: relative;
+}
+html main .navbar .login .menuMobile, body main .navbar .login .menuMobile {
+  position: absolute;
+  top: 150%;
+  left: 0%;
+  display: none;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+html main .navbar .login .menuMobile a, body main .navbar .login .menuMobile a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  padding: 1rem 0rem;
+  padding-right: 2.7rem;
+}
+html main .navbar .login .menuMobile a:hover, body main .navbar .login .menuMobile a:hover {
+  padding: 1rem 0.2rem;
+  padding-right: 3rem;
+  background: linear-gradient(to right, rgba(39, 130, 204, 0.5), rgba(18, 17, 17, 0.5), rgba(204, 39, 39, 0.5));
+  border-radius: 0.5rem;
+  color: black;
+}
+html main .navbar .login .line, body main .navbar .login .line {
+  cursor: pointer;
+}
+html main .navbar .login .loginbtn, body main .navbar .login .loginbtn {
+  font-size: 1.1em;
+  font-family: gilroylight;
+  padding: 0.5rem 1.3em;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+}
+html main .navbar .login .loginbtn:hover, body main .navbar .login .loginbtn:hover {
+  cursor: pointer;
+  scale: 0.95;
+}
+html main .view, body main .view {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+html main .view .word, body main .view .word {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+html main .view .word div h1, body main .view .word div h1 {
+  font-size: clamp(3rem, 12vw, 15rem);
+  font-family: gilroybold;
+}
+html main .view .word .img-letter img, body main .view .word .img-letter img {
+  width: clamp(2.8rem, 10vw, 12rem);
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 50%;
+}
+html main .view .text, body main .view .text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: clamp(0rem, 5vw, 5rem);
+  padding-right: 1.5rem;
+}
+html main .view .text p, body main .view .text p {
+  font-size: clamp(1.7em, 7vw, 5rem);
+  font-family: gilroybold;
+}
+html main .view .text .startbtn, body main .view .text .startbtn {
+  background-color: black;
+  color: white;
+  border-radius: 5rem;
+  border: 1px solid white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-right: 0.5rem;
+}
+html main .view .text .startbtn img, body main .view .text .startbtn img {
+  width: 2.5rem;
+}
+html main .view .text .startbtn::after, body main .view .text .startbtn::after {
+  content: "Start Animating";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  color: black;
+  padding: 0rem 0.4rem;
+  font-size: 1.1em;
+  top: 0%;
+  left: 29%;
+  width: 0%;
+  text-align: center;
+  height: 100%;
+  background-color: yellow;
+  border-radius: 5rem;
+  border: 1px solid yellow;
+  opacity: 0;
+  visibility: hidden;
+}
+html main .view .text .startbtn:hover::after, body main .view .text .startbtn:hover::after {
+  cursor: pointer;
+  width: 75%;
+  opacity: 1;
+  visibility: visible;
+  transition: width 0.1s ease, opacity 0.5s ease;
+}
+html main .hero, body main .hero {
+  width: 100%;
+  padding-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+html main .hero .marquee-background, body main .hero .marquee-background {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+html main .hero .marquee-background .marquee-track1, body main .hero .marquee-background .marquee-track1 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 2rem 0rem;
+  padding-top: 4rem;
+  gap: 0;
+  transform: rotate(-8deg);
+  transform-origin: center;
+}
+html main .hero .marquee-background .marquee-track1 .textm, body main .hero .marquee-background .marquee-track1 .textm {
+  display: flex;
+  gap: 0rem;
+  animation: marquee 8s linear infinite both;
+}
+html main .hero .marquee-background .marquee-track1 .textm .p2-1, body main .hero .marquee-background .marquee-track1 .textm .p2-1 {
+  width: 18rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  background-color: rgb(0, 115, 255);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track1 .textm .p2-2, body main .hero .marquee-background .marquee-track1 .textm .p2-2 {
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: yellow;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track1 .textm .p2-3, body main .hero .marquee-background .marquee-track1 .textm .p2-3 {
+  background-color: rgb(255, 49, 83);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track1 .textm .p2-4, body main .hero .marquee-background .marquee-track1 .textm .p2-4 {
+  background-color: rgb(120, 209, 239);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track2, body main .hero .marquee-background .marquee-track2 {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 2rem 0rem;
+  padding-top: 4rem;
+  gap: 0;
+  transform: rotate(-8deg);
+  transform-origin: center;
+}
+html main .hero .marquee-background .marquee-track2 .textm, body main .hero .marquee-background .marquee-track2 .textm {
+  display: flex;
+  gap: 0rem;
+  animation: marquee 8s linear infinite both;
+}
+html main .hero .marquee-background .marquee-track2 .textm .p2-1, body main .hero .marquee-background .marquee-track2 .textm .p2-1 {
+  width: 18rem;
+  height: -moz-fit-content;
+  height: fit-content;
+  text-align: center;
+  background-color: rgb(0, 115, 255);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track2 .textm .p2-2, body main .hero .marquee-background .marquee-track2 .textm .p2-2 {
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: yellow;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track2 .textm .p2-3, body main .hero .marquee-background .marquee-track2 .textm .p2-3 {
+  background-color: rgb(255, 49, 83);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .marquee-background .marquee-track2 .textm .p2-4, body main .hero .marquee-background .marquee-track2 .textm .p2-4 {
+  background-color: rgb(120, 209, 239);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0.5rem 2rem;
+}
+html main .hero .ai-image-wrapper, body main .hero .ai-image-wrapper {
+  position: relative;
+}
+html main .hero .ai-image-wrapper img, body main .hero .ai-image-wrapper img {
+  position: absolute;
+  width: 20rem;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transform: translate(-50%, 100%);
+  animation: slideUp 1s ease-out 0.1s forwards;
+}
+html main .view-2, body main .view-2 {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+html main .view-2 .rich, body main .view-2 .rich {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+html main .view-2 .rich .Supported, body main .view-2 .rich .Supported {
+  width: 100%;
+}
+html main .view-2 .rich .Supported h2, body main .view-2 .rich .Supported h2 {
+  font-size: clamp(2rem, 3vw, 5rem);
+}
+html main .view-2 .rich .SCompany, body main .view-2 .rich .SCompany {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+html main .view-2 .rich .SCompany .imgwithtext1, body main .view-2 .rich .SCompany .imgwithtext1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+html main .view-2 .rich .SCompany .imgwithtext1 img, body main .view-2 .rich .SCompany .imgwithtext1 img {
+  width: 3rem;
+  border-radius: 10%;
+}
+html main .view-2 .rich .SCompany .imgwithtext2, body main .view-2 .rich .SCompany .imgwithtext2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+html main .view-2 .rich .SCompany .imgwithtext2 img, body main .view-2 .rich .SCompany .imgwithtext2 img {
+  width: 3.5rem;
+  border-radius: 10%;
+}
+html main .view-2 .rich .SCompany .imgwithtext3, body main .view-2 .rich .SCompany .imgwithtext3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+html main .view-2 .rich .SCompany .imgwithtext3 img, body main .view-2 .rich .SCompany .imgwithtext3 img {
+  width: 3rem;
+  border-radius: 10%;
+}
+html main .view-2 .rich .SCompany .imgwithtext4, body main .view-2 .rich .SCompany .imgwithtext4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html main .view-2 .rich .SCompany .imgwithtext4 img, body main .view-2 .rich .SCompany .imgwithtext4 img {
+  width: 3.8rem;
+  border-radius: 10%;
+}
+html main .view-2 .USER, body main .view-2 .USER {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+html main .view-2 .USER .UIH, body main .view-2 .USER .UIH {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+html main .view-2 .USER .UIH .Users, body main .view-2 .USER .UIH .Users {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+html main .view-2 .USER .UIH .Users h1, body main .view-2 .USER .UIH .Users h1 {
+  font-family: gilroybold;
+  font-size: clamp(2rem, 3vw, 2rem);
+}
+html main .view-2 .USER .UIH .Users h3, body main .view-2 .USER .UIH .Users h3 {
+  font-family: gilroybold;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+html main .view-2 .USER .UPIC, body main .view-2 .USER .UPIC {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html main .view-2 .USER .UPIC .pic, body main .view-2 .USER .UPIC .pic {
+  width: 50%;
+  display: flex;
+  position: relative;
+}
+html main .view-2 .USER .UPIC .pic .Propic1, body main .view-2 .USER .UPIC .pic .Propic1 {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+html main .view-2 .USER .UPIC .pic .Propic2, body main .view-2 .USER .UPIC .pic .Propic2 {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  left: 26%;
+}
+html main .view-2 .USER .UPIC .pic .Propic3, body main .view-2 .USER .UPIC .pic .Propic3 {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  left: 56%;
+}
+html main .view-2 .USER .UPIC .textwithpic, body main .view-2 .USER .UPIC .textwithpic {
+  width: 50%;
+}
+html main .view-2 .USER .UPIC .textwithpic h2, body main .view-2 .USER .UPIC .textwithpic h2 {
+  font-family: gilroybold;
+  font-weight: 400;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translate(-50%, 0%);
+    opacity: 1;
+  }
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 780px) {
+  html main .navbar, body main .navbar {
+    padding: 3rem 5rem;
+  }
+  html main .navbar .logo, body main .navbar .logo {
+    gap: 0.3rem;
+  }
+  html main .navbar .logo .logoimage img, body main .navbar .logo .logoimage img {
+    width: 3rem;
+  }
+  html main .navbar .logo h2, body main .navbar .logo h2 {
+    font-size: 1.5em;
+  }
+  html main .navbar .menu, body main .navbar .menu {
+    display: flex;
+  }
+  html main .navbar .login .menuMobile, body main .navbar .login .menuMobile {
+    display: none;
+  }
+  html main .navbar .login .line, body main .navbar .login .line {
+    display: none;
+  }
+  html main .navbar .login .loginbtn, body main .navbar .login .loginbtn {
+    font-size: 1.4em;
+    padding: 0.5rem 1.4em;
+  }
+  html main .hero .ai-image-wrapper img, body main .hero .ai-image-wrapper img {
+    width: 20rem;
+  }
+  html main .view-2, body main .view-2 {
+    padding: 3rem 5rem;
+  }
+  html main .view-2 .USER .UIH .Users h1, body main .view-2 .USER .UIH .Users h1 {
+    font-family: gilroybold;
+    font-size: clamp(2rem, 3vw, 2rem);
+  }
+  html main .view-2 .USER .UPIC .pic, body main .view-2 .USER .UPIC .pic {
+    width: 40%;
+    display: flex;
+    padding-left: 4rem;
+    align-items: center;
+    position: relative;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic1, body main .view-2 .USER .UPIC .pic .Propic1 {
+    border-radius: 50%;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic2, body main .view-2 .USER .UPIC .pic .Propic2 {
+    position: absolute;
+    left: 46%;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic3, body main .view-2 .USER .UPIC .pic .Propic3 {
+    left: 68%;
+  }
+  html main .view-2 .USER .UPIC .textwithpic, body main .view-2 .USER .UPIC .textwithpic {
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+  }
+  html main .view-2 .USER .UPIC .textwithpic h2, body main .view-2 .USER .UPIC .textwithpic h2 {
+    font-family: gilroybold;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1080px) {
+  html main .navbar, body main .navbar {
+    padding: 3rem 5rem;
+  }
+  html main .navbar .menu, body main .navbar .menu {
+    display: flex;
+    gap: 4rem;
+  }
+  html main .navbar .login .menuMobile, body main .navbar .login .menuMobile {
+    display: none;
+  }
+  html main .navbar .login .line, body main .navbar .login .line {
+    display: none;
+  }
+  html main .navbar .login .loginbtn, body main .navbar .login .loginbtn {
+    font-size: 1.3em;
+    padding: 0.5rem 1.4em;
+  }
+  html main .view, body main .view {
+    padding: 3rem 3.5rem;
+    width: 100%;
+    padding: 0rem 0.5rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  html main .view .word, body main .view .word {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+  html main .view .word div h1, body main .view .word div h1 {
+    font-size: clamp(3rem, 12vw, 15rem);
+    font-family: gilroybold;
+  }
+  html main .view .word .img-letter img, body main .view .word .img-letter img {
+    width: clamp(2.8rem, 10vw, 12rem);
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    border-radius: 50%;
+  }
+  html main .view .text, body main .view .text {
+    padding-left: clamp(0rem, 5vw, 20rem);
+    padding-right: 15rem;
+  }
+  html main .view .text p, body main .view .text p {
+    padding-left: 6rem;
+  }
+  html main .view .text .startbtn, body main .view .text .startbtn {
+    font-size: 1rem;
+  }
+  html main .view .text .startbtn::after, body main .view .text .startbtn::after {
+    left: 25%;
+  }
+  html main .view .text .startbtn:hover::after, body main .view .text .startbtn:hover::after {
+    width: 82%;
+  }
+  html main .hero .ai-image-wrapper img, body main .hero .ai-image-wrapper img {
+    width: 25rem;
+  }
+  html main .view-2, body main .view-2 {
+    flex-direction: row;
+    padding: 4rem 9.5rem;
+    gap: 0rem;
+  }
+  html main .view-2 .rich, body main .view-2 .rich {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  html main .view-2 .rich .Supported, body main .view-2 .rich .Supported {
+    width: 100%;
+  }
+  html main .view-2 .rich .Supported h2, body main .view-2 .rich .Supported h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-family: gilroybold;
+  }
+  html main .view-2 .rich .SCompany, body main .view-2 .rich .SCompany {
+    width: 80%;
+  }
+  html main .view-2 .rich .SCompany .imgwithtext1 img, body main .view-2 .rich .SCompany .imgwithtext1 img {
+    width: 4rem;
+  }
+  html main .view-2 .rich .SCompany .imgwithtext2 img, body main .view-2 .rich .SCompany .imgwithtext2 img {
+    width: 4.5rem;
+    border-radius: 10%;
+  }
+  html main .view-2 .rich .SCompany .imgwithtext3 img, body main .view-2 .rich .SCompany .imgwithtext3 img {
+    width: 4rem;
+  }
+  html main .view-2 .rich .SCompany .imgwithtext4 img, body main .view-2 .rich .SCompany .imgwithtext4 img {
+    width: 4.8rem;
+  }
+  html main .view-2 .USER, body main .view-2 .USER {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  html main .view-2 .USER .UIH, body main .view-2 .USER .UIH {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
+  html main .view-2 .USER .UIH .Users, body main .view-2 .USER .UIH .Users {
+    gap: 1rem;
+  }
+  html main .view-2 .USER .UIH .Users h1, body main .view-2 .USER .UIH .Users h1 {
+    font-family: gilroybold;
+    font-size: clamp(2rem, 3vw, 3rem);
+  }
+  html main .view-2 .USER .UIH .Users h3, body main .view-2 .USER .UIH .Users h3 {
+    font-size: 1.5rem;
+  }
+  html main .view-2 .USER .UPIC, body main .view-2 .USER .UPIC {
+    justify-content: flex-start;
+  }
+  html main .view-2 .USER .UPIC .pic, body main .view-2 .USER .UPIC .pic {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    padding: 0rem;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic1, body main .view-2 .USER .UPIC .pic .Propic1 {
+    width: 4.5rem;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic2, body main .view-2 .USER .UPIC .pic .Propic2 {
+    width: 4.5rem;
+    position: absolute;
+    left: 20%;
+  }
+  html main .view-2 .USER .UPIC .pic .Propic3, body main .view-2 .USER .UPIC .pic .Propic3 {
+    width: 4.5rem;
+    position: absolute;
+    left: 40%;
+  }
+  html main .view-2 .USER .UPIC .textwithpic, body main .view-2 .USER .UPIC .textwithpic {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  html main .view-2 .USER .UPIC .textwithpic h2, body main .view-2 .USER .UPIC .textwithpic h2 {
+    font-family: gilroybold;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+  html main .view-2 .USER .UPIC .textwithpic p, body main .view-2 .USER .UPIC .textwithpic p {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
