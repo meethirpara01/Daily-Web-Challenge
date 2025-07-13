@@ -786,35 +786,34 @@ html main .view-3 .pixelArt .textContentV3 .button .AnimatingBtnV3text:hover, bo
     gap: 1.5rem;
   }
   html main .view-3 .ARTH1V3, body main .view-3 .ARTH1V3 {
-    width: 50%;
-    font-size: clamp(2rem, 4vw, 3.2rem);
+    width: 40%;
+    font-size: clamp(2rem, 4vw, 3.4rem);
   }
   html main .view-3 .pixelArt, body main .view-3 .pixelArt {
     width: 100%;
     flex-direction: row;
-    gap: 1.5rem;
+    gap: 2rem;
   }
   html main .view-3 .pixelArt .ARTIMAGE, body main .view-3 .pixelArt .ARTIMAGE {
-    width: 50%;
+    width: 40%;
   }
   html main .view-3 .pixelArt .ARTIMAGE img, body main .view-3 .pixelArt .ARTIMAGE img {
     height: 100%;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   html main .view-3 .pixelArt .textContentV3, body main .view-3 .pixelArt .textContentV3 {
     width: 50%;
-    gap: 2.5rem;
-    padding-top: 1.5rem;
+    gap: 3rem;
+    padding-top: 2.5rem;
   }
   html main .view-3 .pixelArt .textContentV3 .PixelAIchemyP, body main .view-3 .pixelArt .textContentV3 .PixelAIchemyP {
     font-size: 1.7rem;
   }
   html main .view-3 .pixelArt .textContentV3 .EXPLOREH1V3, body main .view-3 .pixelArt .textContentV3 .EXPLOREH1V3 {
-    font-size: clamp(2rem, 4vw, 3.4rem);
+    width: 70%;
+    font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.3;
   }
   html main .view-3 .pixelArt .textContentV3 .ParagraphV3, body main .view-3 .pixelArt .textContentV3 .ParagraphV3 {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 }/*# sourceMappingURL=style.css.map */

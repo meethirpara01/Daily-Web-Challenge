@@ -1208,8 +1208,8 @@ html, body
 
                 .ARTH1V3
                 {
-                    width: 50%;
-                    font-size: clamp(2rem, 4vw, 3.2rem);
+                    width: 40%;
+                    font-size: clamp(2rem, 4vw, 3.4rem);
 
                 }
 
@@ -1217,23 +1217,24 @@ html, body
                 {
                     width: 100%;
                     flex-direction: row;
-                    gap: 1.5rem;
+                    gap: 2rem;
 
                     .ARTIMAGE
                     {
-                        width: 50%;
+                        width: 40%;
                         img
                         {
                             height: 100%;
-                            height: fit-content;
+                            // height: fit-content;
                         }
                     }
 
                     .textContentV3
                     {
                         width: 50%;
-                        gap: 2.5rem;
-                        padding-top: 1.5rem;
+                        gap: 3rem;
+                        padding-top: 2.5rem;
+
                         .PixelAIchemyP
                         {
                             font-size: 1.7rem;
@@ -1241,14 +1242,15 @@ html, body
 
                         .EXPLOREH1V3
                         {
-                            font-size: clamp(2rem, 4vw, 3.4rem);
+                            width: 70%;
+                            font-size: clamp(2rem, 4vw, 3.5rem);
                             line-height: 1.3;
 
                         }
 
                         .ParagraphV3
                         {
-                            font-size: 1.4rem;
+                            font-size: 1.7rem;
                         }
 
                         // .button
