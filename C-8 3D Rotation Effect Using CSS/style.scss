@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Karantina:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Poppins;
+    color: #1E1E1E;
+    background-color: #CDCDCD;
+    background-image:
+        repeating-linear-gradient(to right, transparent 0 150px, #0001 150px 151px),
+        repeating-linear-gradient(to bottom, transparent 0 150px, #0001 150px 151px),
+        linear-gradient(to right, #CDCDcc, #CDCDCDcc),
+        url(images/bg.jpg);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    width: min(1200px, 90vw);
+    height: 0px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    flex-wrap: wrap;
+
+    h1 {
+        font-family: "Karantina", system-ui;
+        font-size: 16vw;
+        line-height: 0.8em;
+    }
+
+    .author {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h3 {
+            font-family: "Karantina", system-ui;
+            font-size: 5vw;
+        }
+
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        div p:nth-child(2) {
+            font-weight: 500;
+        }
+
+        img {
+            width: 250px;
+        }
+    }
+}
+
+.banner {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .product {
+        // background-color: red;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        display: flex;
+        bottom: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        transition: 0.7s;
+        --left: 0px;
+
+        .soda {
+            background:
+                var(--url) var(--left), 0,
+                url(images/mockup.png);
+            background-size: auto 100%;
+            width: 280px;
+            // height: 400px;
+            aspect-ratio: 2 / 4;
+            background-blend-mode: multiply;
+            mask-image: url(images/mockup.png);
+            mask-size: auto 100%;
+            transition: 0.7s;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .product:hover {
+        --left: -1000px;
+        transform: translateX(-50%) translateY(-120px);
+
+        .soda:nth-child(2) {
+            opacity: 1;
+            --left: 500px;
+        }
+
+        .soda:nth-child(1) {
+            opacity: 0;
+            --left: 500px;
+        }
+
+        .rock img:nth-child(1) {
+            transform: translateX(-50%) translateY(50px);
+        }
+
+        .rock img:nth-child(2) {
+            transform: translateX(-100px) translateY(100px);
+        }
+
+        .rock img:nth-child(3) {
+            transform: translateX(100px) translateY(100px);
+        }
+    }
+
+    .rock {
+        position: absolute;
+        inset: 0 0 0 0;
+        pointer-events: none;
+
+        img:nth-child(1) {
+            position: absolute;
+            height: 170px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 30px;
+            transition: 0.7s;
+            z-index: 1;
+        }
+
+        img:nth-child(2) {
+            position: absolute;
+            height: 50%;
+            left: 0;
+            bottom: 0;
+            transition: 0.7s;
+        }
+
+        img:nth-child(3) {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            bottom: -100px;
+            rotate: -25deg;
+            transition: 0.7s;
+        }
+    }
+}

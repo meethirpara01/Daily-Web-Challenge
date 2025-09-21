@@ -123,7 +123,7 @@ html .game-container .game #quoteInput, body .game-container .game #quoteInput {
   font-size: 1.5em;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-html .game-container .game #quoteInput:-moz-placeholder-shown, body .game-container .game #quoteInput:-moz-placeholder-shown {
+html .game-container .game #quoteInput:-moz-placeholder, body .game-container .game #quoteInput:-moz-placeholder {
   font-size: 1.3em;
 }
 html .game-container .game #quoteInput:placeholder-shown, body .game-container .game #quoteInput:placeholder-shown {
