@@ -94,6 +94,10 @@ header {
             left: 50%;
             transform: translateX(-50%);
         }
+
+        .soda:nth-child(2) {
+            opacity: 0;
+        }
     }
 
     .product:hover {
