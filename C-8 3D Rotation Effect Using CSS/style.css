@@ -119,13 +119,6 @@ header .author img {
   transition: 0.7s;
   z-index: 1;
 }
-.banner .rock img:nth-child(2) {
-  position: absolute;
-  height: 50%;
-  left: 0;
-  bottom: 0;
-  transition: 0.7s;
-}
 .banner .rock img:nth-child(3) {
   position: absolute;
   height: 100%;
