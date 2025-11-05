@@ -4,6 +4,12 @@
     src: url(./Font/NeueMachina-Regular_DQCmjH1st.ttf);
 }
 
+@font-face 
+{
+    font-family: hell;
+    src: url(./Font/Helvetica_NTUXwLmxSC.ttf);
+}
+
 *
 {
     margin: 0%;
@@ -23,25 +29,26 @@ html, body
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 15px 70px;
+        padding: 20px 90px;
 
         .nav1
         {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             gap: 18px;
 
             h4 
             {
                 font-family: monospace;
                 font-size: 20px;
+                line-height: 1.3;
                 font-weight: 100;
                 font-family: neu;
             }
 
             img 
             {
-                height: 45px;
+                height: 55px;
             }
         }
         
@@ -50,19 +57,52 @@ html, body
         {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 65px;
 
             h4 
             {
-                font-family: monospace;
-                font-size: 18px;
+                font-size: 20px;
                 font-weight: 100;
+                font-family: neu;
+
+                i 
+                {
+                    font-size: 25px;
+                }
             }
 
             img 
             {
-                height: 25px;
-                width: 25px;
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+            }
+
+        }
+        
+        
+        .nav3
+        {
+            display: none;
+            align-items: center;
+            gap: 30px;
+
+            h4 
+            {
+                font-size: 20px;
+                font-weight: 100;
+                font-family: neu;
+
+                i 
+                {
+                    font-size: 25px;
+                }
+            }
+
+            img 
+            {
+                height: 35px;
+                width: 35px;
                 border-radius: 50%;
             }
 
