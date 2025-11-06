@@ -1,0 +1,138 @@
+:root {
+  --gray: #212121;
+  --lgreen: #02E797;
+  --green: #009560;
+  --white: #E9E9E9;
+  --black: #0c0c0c;
+  --lgray: #929292;
+}
+
+@font-face {
+  font-family: f1;
+  src: url(./Font/4UasrENHsxJlGDuGo1OIlJfC6l_24rlCK1Yo_Iqcsih3SAyH6cAwhX9RPjIUvbQoi-E.woff2);
+}
+@font-face {
+  font-family: f2;
+  src: url(./Font/KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  color: var(--black);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: var(--white);
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: fixed;
+  top: 0%;
+}
+nav .logo img {
+  width: 6vw;
+}
+nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+nav .menu h4 {
+  font-size: 1vw;
+  font-family: f1;
+  font-weight: 100;
+  text-align: center;
+  cursor: pointer;
+}
+nav .menu h4 i {
+  font-size: 22px;
+}
+nav .menu .btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #0c0c0c;
+  background-color: var(--white);
+  position: relative;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+nav .menu .btn a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1vw;
+  font-family: f1;
+  font-weight: 100;
+  position: relative;
+  z-index: 9;
+}
+nav .menu .btn::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%), linear-gradient(136deg, transparent, #71c7ee 290%), linear-gradient(115deg, #9d9af1, transparent 40%), linear-gradient(180deg, transparent 0, #1a68d3 70%), radial-gradient(ellipse at -70% -180%, transparent 80%, #71c7ee 0), radial-gradient(ellipse at bottom, #1a68d3 40%, transparent 80%), radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
+  left: 0%;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+nav .menu .btn:hover::after {
+  bottom: 0%;
+  border-radius: 0%;
+}
+nav .menu .btn:hover {
+  border: 1px solid #E9E9E9;
+}
+nav .menu .btn:hover a {
+  color: var(--white);
+}
+nav .Mmenu {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  nav .logo img {
+    width: 10vw;
+  }
+  nav .menu {
+    display: none;
+  }
+  nav .Mmenu {
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+@media (max-width: 600px) {
+  nav {
+    padding: 20px 30px;
+  }
+  nav .logo img {
+    width: 15vw;
+  }
+  nav .menu {
+    display: none;
+  }
+  nav .Mmenu {
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+main .section1 {
+  width: 100%;
+  height: 200vh;
+  background: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%), linear-gradient(136deg, transparent, #71c7ee 290%), linear-gradient(115deg, #9d9af1, transparent 40%), linear-gradient(180deg, transparent 0, #1a68d3 70%), radial-gradient(ellipse at -70% -180%, transparent 80%, #71c7ee 0), radial-gradient(ellipse at bottom, #1a68d3 40%, transparent 80%), radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
+}/*# sourceMappingURL=style.css.map */
