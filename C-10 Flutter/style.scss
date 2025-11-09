@@ -45,6 +45,7 @@ nav {
     border-bottom-right-radius: 25px;
     position: fixed;
     top: 0%;
+    z-index: 999;
 
     .logo {
         img {
@@ -165,7 +166,93 @@ nav {
 main {
     .section1 {
         width: 100%;
-        height: 200vh;
+        min-height: 100vh;
         background: radial-gradient(ellipse at bottom, #1a68d3 5%, transparent 60%), linear-gradient(136deg, transparent, #71c7ee 290%), linear-gradient(115deg, #9d9af1, transparent 40%), linear-gradient(180deg, transparent 0, #1a68d3 70%), radial-gradient(ellipse at -70% -180%, transparent 80%, #71c7ee 0), radial-gradient(ellipse at bottom, #1a68d3 40%, transparent 80%), radial-gradient(ellipse at 5% 340%, transparent 80%, #bfc2f4 0);
+        padding-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+
+        h1 
+        {
+            font-size: 3vw;
+            font-family: f1;
+            // font-weight: 200;
+            color: #fff;
+        }
+
+        .gridlayout {
+            width: 100%;
+            aspect-ratio: 2.5 /1 ;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 0.5fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "L C R";
+            gap: 10px;
+
+            .leftpart {
+                width: 100%;
+                grid-area: L;
+                background-color: #009560;
+                display: flex;
+                flex-direction: column;
+                
+                .topunderleft
+                {
+                    width: 100%;
+                    background-color: red;
+                    padding-left: 40%;
+                    padding-top: 10%;
+
+                    .topleftimage
+                    {
+                        width: 100%;
+                        aspect-ratio: 1.8/1;
+                        background-color: yellow;
+                        background-image: url(./assets/hero-the-debertz.ab8b95b9e14883037297.png);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        border-radius: 10px;
+                    }
+                }
+
+                .bottomunderleft
+                {
+                    width: 100%;
+                    background-color: #929292;
+                    background-color: red;
+                    padding-left: 40%;
+                    padding-top: 10%;
+
+                    .b1 
+                    {
+
+                    }
+
+                    .b2 
+                    {
+
+                    }
+
+                }
+            }
+            
+            .centerpart {
+                width: 100%;
+                grid-area: C;
+                background-color: #1a68d3;
+                background-image: url(./assets/hero-bmw-mobile.90e34daecca082eb9b28.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            .rightpart {
+                width: 100%;
+               grid-area: R;
+               background-color: #9d9af1;
+            }
+        }
     }
 }
