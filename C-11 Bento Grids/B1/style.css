@@ -4,7 +4,61 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+main .gidlayout {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "A B C" "A B D" "A B D" "A E E" "F E E";
+  gap: 10px;
+}
+main .gidlayout .card1 {
+  background-color: black;
+  border-radius: 20px;
+  border: none;
+  grid-area: A;
+}
+main .gidlayout .card2 {
+  background-color: darkblue;
+  border-radius: 20px;
+  border: none;
+  grid-area: B;
+}
+main .gidlayout .card3 {
+  background-color: brown;
+  border-radius: 20px;
+  border: none;
+  grid-area: C;
+}
+main .gidlayout .card4 {
+  background-color: cadetblue;
+  border-radius: 20px;
+  border: none;
+  grid-area: D;
+}
+main .gidlayout .card5 {
+  background-color: chocolate;
+  border-radius: 20px;
+  border: none;
+  grid-area: E;
+}
+main .gidlayout .card6 {
+  background-color: crimson;
+  border-radius: 20px;
+  border: none;
+  grid-area: F;
 }/*# sourceMappingURL=style.css.map */

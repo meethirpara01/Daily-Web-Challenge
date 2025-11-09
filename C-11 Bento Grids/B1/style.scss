@@ -1,13 +1,95 @@
-*
-{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-html, body
-{
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
+main {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+    .gidlayout {
+        width: 100%;
+        height: 100%;
+        // background-color: antiquewhite;
+        border-radius: 20px;
+        border: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "A B C"
+            "A B D"
+            "A B D"
+            "A E E"
+            "F E E";
+        gap: 10px;
+
+        .card1 {
+            // background-image: url(./assets/20251109_1905_Luminous\ Glass\ Prism_remix_01k9md53hpf8ttqw94px39sp4v.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color:black;
+            border-radius: 20px;
+            border: none;
+            grid-area: A;
+        }
+
+        .card2 {
+            // background-image: url(./assets/20251109_1919_Prismatic\ Serenity\ Portrait_remix_01k9me01bre3z92f4n8m8f8rsa.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color: darkblue;
+            border-radius: 20px;
+            border: none;
+            grid-area: B;
+        }
+
+        .card3 {
+            // background-image: url(./assets/20251109_1924_Sleek\ Prism\ Logo_remix_01k9me81xtfqw88jqnpp445zq3.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color:brown;
+            border-radius: 20px;
+            border: none;
+            grid-area: C;
+        }
+
+        .card4 {
+            // background-image: url(./assets/20251109_1925_Minimalist\ Geometric\ Logo\ Design_remix_01k9meatp2egdsg5azf1j7rfc7.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color:cadetblue;
+            border-radius: 20px;
+            border: none;
+            grid-area: D;
+        }
+
+        .card5 {
+            // background-image: url(./assets/20251109_1909_Prism\ Music\ Experience_remix_01k9mddebaftq8hr62cst4wpsk.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color:chocolate;
+            border-radius: 20px;
+            border: none;
+            grid-area: E;
+        }
+
+        .card6 {
+            // background-image: url(./assets/20251109_1927_Futuristic\ Music\ Interface_remix_01k9medm3rfzeb58jzwhngvzbd.png);
+            // background-size: contain;
+            // background-repeat: no-repeat;
+            background-color:crimson;
+            border-radius: 20px;
+            border: none;
+            grid-area: F;
+        }
+    }
+}
